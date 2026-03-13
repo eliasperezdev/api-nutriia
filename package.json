@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate-types": "npx openapi-typescript http://localhost:4000/docs/json -o src/types/api.ts"
+    "generate-types": "npx openapi-typescript ${API_URL:-http://localhost:4000}/docs/json -o src/types/api.ts"
 
   },
   "dependencies": {

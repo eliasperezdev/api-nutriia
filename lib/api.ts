@@ -11,7 +11,6 @@ const BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000/api";
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const url = `${BASE_URL}${path}`;
-  console.log("[api] →", url);
   const res = await fetch(url, {
     headers: { "Content-Type": "application/json" },
     ...init,
